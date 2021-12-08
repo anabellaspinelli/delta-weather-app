@@ -7,10 +7,12 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@types/classnames": "^2.3.1",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "classnames": "^2.3.1",
     "eslint-plugin-chai-friendly": "^0.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -19,8 +21,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "ESLINT_NO_DEV_ERRORS='true' craco start",
-    "build": "craco build",
+    "start": "ESLINT_NO_DEV_ERRORS='true' craco start --openssl-legacy-provider",
+    "build": "craco build --openssl-legacy-provider",
     "test": "craco test",
     "eject": "react-scripts eject",
     "format": "prettier --write src/**/*.ts{,x}",
