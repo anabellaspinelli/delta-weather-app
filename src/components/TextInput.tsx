@@ -4,12 +4,14 @@ interface TextInputProps {
   labelText: string;
   placeholder?: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  value: string;
 }
 
 const TextInput: React.FC<TextInputProps> = ({
   labelText,
   placeholder,
   onChange,
+  value,
 }: TextInputProps) => {
   const inputId = `input-${labelText}`;
   return (
@@ -18,12 +20,14 @@ const TextInput: React.FC<TextInputProps> = ({
         {labelText}
       </label>
       <input
-        className="border-2 border-gray-100 px-4 py-2 rounded-md w-full"
+        autoComplete="off"
+        className="border-2 border-gray-200 px-4 py-2 rounded-md w-full"
         id={inputId}
         name={labelText}
         onChange={onChange}
         placeholder={placeholder ? placeholder : ''}
         type="text"
+        value={value}
       />
     </div>
   );

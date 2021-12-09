@@ -6,6 +6,7 @@ interface ButtonProps {
   disabled?: boolean;
   className?: string;
   onClick: (event: React.MouseEvent) => void;
+  type?: 'button' | 'submit';
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -13,6 +14,7 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   disabled,
   className,
+  type = 'button',
 }) => {
   return (
     <button
@@ -25,6 +27,7 @@ const Button: React.FC<ButtonProps> = ({
         className
       )}
       onClick={onClick}
+      type={type}
     >
       {label}
     </button>
